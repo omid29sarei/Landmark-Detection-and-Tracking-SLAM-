@@ -92,8 +92,8 @@ class robot:
         
         ## TODO: return the final, complete list of measurements
         for index in range(len(self.landmarks)):
-            x_value = self.landmarks[index]
-            y_value = self.landmarks[index]
+            x_value = self.landmarks[index][0]
+            y_value = self.landmarks[index][1]
             
             dx = self.x - x_value + self.measurement_noise * self.rand()
             dy = self.y - y_value + self.measurement_noise * self.rand()
